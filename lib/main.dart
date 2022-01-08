@@ -49,78 +49,110 @@ class HomePage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     final double appBarHeight = 55.0;
 
-    const List<Map<String, String>> proyects = [
+    const List<Map<String, dynamic>> proyects = [
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": [
+          "logo-flutter",
+          "logo-dart",
+          "logo-firebase",
+          "logo-playstore"
+        ]
       },
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
       },
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
       },
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
       },
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
       },
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
       },
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
       },
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
       },
       {
         "title": "Movies App",
         "description":
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
-        "link":
+        "link-demo":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "link-repository":
+            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
       }
     ];
 
@@ -271,7 +303,7 @@ class HomePage extends StatelessWidget {
                       for (Map proyect in proyects)
                         Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
+                              horizontal: 10, vertical: 10),
                           child: Container(
                             decoration: BoxDecoration(
                                 color: color2,
@@ -279,55 +311,125 @@ class HomePage extends StatelessWidget {
                                     BorderRadius.all(Radius.circular(10))),
                             height: size.height * 0.25,
                             width: size.width / 3.8,
-                            child: Row(children: [
-                              Expanded(
-                                child: Container(
-                                  child: Image.asset(
-                                    proyect["image"],
-                                    fit: BoxFit.cover,
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    child: Image.asset(
+                                      proyect["image"],
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        proyect["title"],
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                      const SizedBox(height: 10),
-                                      Text(proyect["description"],
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Text(
+                                          proyect["title"],
                                           style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w300)),
-                                      const Spacer(),
-                                      Align(
-                                        alignment: Alignment.centerRight,
-                                        child: MaterialButton(
-                                          onPressed: () async {
-                                            await launch(proyect["link"]);
-                                          },
-                                          color: Colors.red,
-                                          child: Text(
-                                            "Ir a proyecto",
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w500),
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                        Text(
+                                          proyect["description"],
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w300,
+                                          ),
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            MaterialButton(
+                                              onPressed: () async {
+                                                await launch(
+                                                    proyect["link-repository"]);
+                                              },
+                                              color: Colors.green,
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceAround,
+                                                children: [
+                                                  Icon(
+                                                    Icons.code_outlined,
+                                                    color: Colors.black87,
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 5,
+                                                  ),
+                                                  Text(
+                                                    "Ir a código",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            MaterialButton(
+                                              onPressed: () async {
+                                                await launch(
+                                                    proyect["link-demo"]);
+                                              },
+                                              color: Colors.red,
+                                              child: Row(
+                                                children: [
+                                                  Icon(
+                                                    Icons.visibility_rounded,
+                                                    color: Colors.black87,
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 5,
+                                                  ),
+                                                  Text(
+                                                    "Ir a demo",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            for (String tecnologyLogo
+                                                in proyect["tecnologies-logo"])
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(4.0),
+                                                child: CircleAvatar(
+                                                    backgroundColor:
+                                                        Colors.white,
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              4.0),
+                                                      child: Image.asset(
+                                                          tecnologyLogo +
+                                                              ".png"),
+                                                    )),
+                                              ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ]),
+                              ],
+                            ),
                           ),
                         ),
                     ])
