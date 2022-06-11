@@ -6,8 +6,10 @@ import 'package:kevin_portfolio/ui/widgets/custom_stepper/custom_stepper.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'dart:html' as html;
+import 'dart:convert';
+import 'package:http/http.dart';
 
 void main() {
   runApp(MyApp());
@@ -77,18 +79,22 @@ class HomePage extends StatelessWidget {
         PageController(viewportFraction: 0.65, initialPage: 1);
 
     final List<String> usedTecnologies = [
-      "flutter",
-      "django",
-      "python",
-      "vueJs",
+      "Flutter",
+      "Django",
+      "Python",
+      "VueJs",
       "MySQL",
       "MongoDB",
-      "PosgresSQL",
+      "PosgreSQL",
       "JavaScript",
       "HTML",
       "CSS",
       "Flask",
       "Firebase",
+      "NodeJs",
+      "Google Cloud Platform",
+      "Google Play",
+      "Apple Store",
     ];
 
     List<Map> steps = [
@@ -96,7 +102,7 @@ class HomePage extends StatelessWidget {
         "title": "Telecentro",
         "position": "Desarrollador flutter",
         "tasks":
-            "Mantenimiento, desarrollo de nuevas funcionalidades en APP Sucursal Virtual",
+            "Deploys, Mantenimiento y desarrollo de nuevas funcionalidades en APP Sucursal Virtual",
         //"achievements":
         //    "Logré ayudar en el proceso de refactorización de la app SV",
         "logo": "telecentro-logo.png",
@@ -133,11 +139,23 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": [
-          "logo-flutter",
-          "logo-dart",
-          "logo-firebase",
-          "logo-playstore"
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
         ]
       },
       {
@@ -149,7 +167,24 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
       },
       {
         "title": "Movies App",
@@ -160,7 +195,24 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
       },
       {
         "title": "Movies App",
@@ -171,7 +223,24 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
       },
       {
         "title": "Movies App",
@@ -182,7 +251,24 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
       },
       {
         "title": "Movies App",
@@ -193,7 +279,24 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
       },
       {
         "title": "Movies App",
@@ -204,7 +307,24 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
       },
       {
         "title": "Movies App",
@@ -215,7 +335,24 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
       },
       {
         "title": "Movies App",
@@ -226,36 +363,41 @@ class HomePage extends StatelessWidget {
             "https://play.google.com/store/apps/details?id=app.movie.finder",
         "link-repository":
             "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies-logo": ["logo-flutter", "logo-dart", "logo-firebase"]
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-firebase",
+            "tecnology": "Firebase",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
       }
     ];
 
-    final bool isMobileDesign = size.width < 480;
-
-    if (isMobileDesign) {
-      return MobileDesign(
-        appBarHeight: appBarHeight,
-        separatorDrawerMobile: separatorDrawerMobile,
-        size: size,
-        proyectsController: proyectsController,
-        proyects: proyects,
-        steps: steps,
-      );
-    } else {
-      return WebDesign(
-          appBarHeight: appBarHeight,
-          separatorAppBar: separatorAppBar,
-          size: size,
-          proyectsController: proyectsController,
-          proyects: proyects);
-    }
+    return MobileDesign(
+      appBarHeight: appBarHeight,
+      separatorDrawerMobile: separatorDrawerMobile,
+      size: size,
+      proyectsController: proyectsController,
+      proyects: proyects,
+      steps: steps,
+      usedTecnologies: usedTecnologies,
+    );
   }
 }
 
-GlobalKey drawerKey = GlobalKey();
-
-class MobileDesign extends StatelessWidget {
-  const MobileDesign({
+class MobileDesign extends StatefulWidget {
+  MobileDesign({
     Key key,
     @required this.appBarHeight,
     @required this.separatorDrawerMobile,
@@ -263,6 +405,7 @@ class MobileDesign extends StatelessWidget {
     @required this.proyectsController,
     @required this.proyects,
     @required this.steps,
+    @required this.usedTecnologies,
   }) : super(key: key);
 
   final double appBarHeight;
@@ -271,16 +414,63 @@ class MobileDesign extends StatelessWidget {
   final steps;
   final PageController proyectsController;
   final List<Map<String, dynamic>> proyects;
+  final List<String> usedTecnologies;
+
+  @override
+  _MobileDesignState createState() => _MobileDesignState();
+}
+
+class _MobileDesignState extends State<MobileDesign> {
+  final _formNameKey = GlobalKey<FormState>();
+
+  final _formSuggestionKey = GlobalKey<FormState>();
+
+  String username;
+
+  String suggestion;
+
+  bool _isLoading = false;
+
+  sendEmail() async {
+    try {
+      // Mi backend
+      final uri = Uri.parse('https://nodejs-send-email.vercel.app/send_email');
+      final headers = {'Content-Type': 'application/json'};
+      final String subject = "Nuevo contacto desde portafolio :)";
+
+      Map<String, dynamic> body = {
+        'name': username,
+        'content': suggestion,
+        "subject": subject
+      };
+
+      String jsonBody = json.encode(body);
+      final encoding = Encoding.getByName('utf-8');
+
+      Response response = await post(
+        uri,
+        headers: headers,
+        body: jsonBody,
+        encoding: encoding,
+      );
+    } catch (error) {
+      print("Hubo un error $error");
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    final bool isMobileDesign = widget.size.width < 480;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         backgroundColor: color1,
       ),
+      /*
       drawer: Drawer(
-        key: drawerKey,
         child: Column(
           children: [
             TextButton(
@@ -293,7 +483,7 @@ class MobileDesign extends StatelessWidget {
               ),
               onPressed: () {},
             ),
-            separatorDrawerMobile,
+            widget.separatorDrawerMobile,
             TextButton(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -304,7 +494,7 @@ class MobileDesign extends StatelessWidget {
               ),
               onPressed: () {},
             ),
-            separatorDrawerMobile,
+            widget.separatorDrawerMobile,
             TextButton(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -315,7 +505,7 @@ class MobileDesign extends StatelessWidget {
               ),
               onPressed: () {},
             ),
-            separatorDrawerMobile,
+            widget.separatorDrawerMobile,
             TextButton(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -329,6 +519,7 @@ class MobileDesign extends StatelessWidget {
           ],
         ),
       ),
+      */
       body: Stack(
         children: [
           Container(
@@ -340,29 +531,37 @@ class MobileDesign extends StatelessWidget {
                 children: [
                   // NARANJA
                   Positioned(
-                      right: -size.width * 0.1,
-                      top: -size.height * 0.1,
-                      child: CircleAvatar(
-                          backgroundColor: Colors.primaries[0], radius: 90)),
-
+                    right: -widget.size.width * 0.1,
+                    top: -widget.size.height * 0.1,
+                    child: CircleAvatar(
+                        backgroundColor: Colors.primaries[0],
+                        radius:
+                            ((widget.size.width + widget.size.height) / 12)),
+                  ),
                   //ROJO
                   Positioned(
-                    top: size.height / 3,
-                    left: -size.width * 0.15,
+                    top: widget.size.height / 5,
+                    left: -widget.size.width * 0.15,
                     child: CircleAvatar(
-                        backgroundColor: Colors.primaries[1], radius: 70),
+                        backgroundColor: Colors.primaries[1],
+                        radius:
+                            ((widget.size.width + widget.size.height) / 15)),
                   ),
                   Positioned(
-                      top: size.height * 0.48,
-                      right: -size.width * 0.13,
+                      top: widget.size.height * 0.48,
+                      right: -widget.size.width * 0.13,
                       child: CircleAvatar(
-                          backgroundColor: Colors.primaries[2], radius: 80)),
+                          backgroundColor: Colors.primaries[2],
+                          radius:
+                              ((widget.size.width + widget.size.height) / 13))),
                   // Violeta
                   Positioned(
-                      top: size.height * 0.7,
-                      left: -size.width * 0.1,
+                      top: widget.size.height * 0.7,
+                      left: -widget.size.width * 0.1,
                       child: CircleAvatar(
-                          backgroundColor: Colors.primaries[3], radius: 110)),
+                          backgroundColor: Colors.primaries[3],
+                          radius:
+                              ((widget.size.width + widget.size.height) / 10))),
                 ],
               ),
             ),
@@ -371,397 +570,146 @@ class MobileDesign extends StatelessWidget {
             children: [
               Expanded(
                 child: ListView(
+                  shrinkWrap: true,
                   children: [
                     Container(
-                      height: size.height * 0.6,
-                      width: size.width,
+                      height: widget.size.height * 0.6,
+                      width: widget.size.width,
                       child: Center(
-                        child: Wrap(
-                            alignment: WrapAlignment.center,
-                            crossAxisAlignment: WrapCrossAlignment.center,
-                            runSpacing: 45,
-                            children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 20, right: 20),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    /*
-                            Text(
-                              "Bienvenidos a mi portfolio",
-                              style: TextStyle(
-                                  color: Colors.white.withOpacity(0.7),
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            */
-                                    FittedBox(
-                                      child: Text(
-                                        "Kevin Figueroa",
-                                        style: TextStyle(
-                                            color: Colors.red,
-                                            fontSize: 55,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 12),
-                                    FittedBox(
-                                      child: Row(
-                                        children: [
-                                          Icon(
-                                            Icons.arrow_forward_ios_outlined,
-                                            color: Colors.red,
-                                          ),
-                                          const SizedBox(
-                                            width: 10,
-                                          ),
-                                          Text(
-                                            "Desarrollador FullStack",
-                                            style: TextStyle(
-                                                color: Colors.white
-                                                    .withOpacity(0.7),
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.w400),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 40),
-                              Align(
-                                alignment: Alignment.center,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(right: 40),
-                                  child: Container(
-                                    width: size.width / 2.2,
-                                    child: Image.asset(
-                                      "imagen_fondo_portfolio.png",
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ]),
+                        child: Presentation(
+                          size: widget.size,
+                          isMobileDesign: isMobileDesign,
+                        ),
                       ),
                     ),
                     Container(
-                      width: size.width,
-                      height: size.height * 0.55,
+                      width: widget.size.width,
+                      height: widget.size.height * 0.57,
                       child: Column(
                         children: [
                           SectionTitle(
-                            size: size,
+                            size: widget.size,
                             title: "Proyectos",
                           ),
                           const SizedBox(height: 40),
-                          /*Align(
-                            alignment: Alignment.centerLeft,
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Text(
-                                  "Estos son algunos de mis proyectos en los que trabajé...",
-                                  style: TextStyle(
-                                      fontSize: 17,
-                                      color: Colors.white.withOpacity(0.8))),
-                            ),
-                          ),*/
-
-                          Expanded(
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 10),
-                              child: CarouselSlider.builder(
-                                  options: CarouselOptions(
-                                    viewportFraction: 0.77,
-                                    initialPage: 1,
-                                    enableInfiniteScroll: false,
-                                    reverse: false,
-                                    autoPlay: false,
-                                    autoPlayCurve: Curves.fastOutSlowIn,
-                                    enlargeCenterPage: true,
-                                    scrollDirection: Axis.horizontal,
-                                  ),
-                                  itemCount: proyects.length,
-                                  itemBuilder: (context, index, _) {
-                                    Map proyect = proyects[index];
-                                    return Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 15, vertical: 15),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            color: color2,
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(10))),
-                                        child: Row(
-                                          children: [
-                                            Expanded(
-                                              child: Image.asset(
-                                                proyect["image"],
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                            Expanded(
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(10.0),
-                                                child: Column(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceAround,
-                                                  children: [
-                                                    FittedBox(
-                                                      child: Text(
-                                                        proyect["title"],
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: TextStyle(
-                                                          fontSize: 18,
-                                                          color: Colors.red,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    const SizedBox(height: 10),
-                                                    Expanded(
-                                                      flex: 2,
-                                                      child: AutoSizeText(
-                                                        proyect["description"],
-                                                        minFontSize: 2,
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: TextStyle(
-                                                          fontSize: 16,
-                                                          color: Colors.white60,
-                                                          letterSpacing: 1.1,
-                                                          fontWeight:
-                                                              FontWeight.w300,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    const SizedBox(height: 10),
-                                                    Expanded(
-                                                      child: Column(
-                                                        children: [
-                                                          Expanded(
-                                                            child: TextButton(
-                                                              onPressed:
-                                                                  () async {
-                                                                await launch(
-                                                                    proyect[
-                                                                        "link-repository"]);
-                                                              },
-                                                              child: Stack(
-                                                                alignment:
-                                                                    Alignment
-                                                                        .center,
-                                                                children: [
-                                                                  Align(
-                                                                    alignment:
-                                                                        Alignment
-                                                                            .centerLeft,
-                                                                    child: Icon(
-                                                                      Icons
-                                                                          .code_outlined,
-                                                                      color: Colors
-                                                                          .black87,
-                                                                    ),
-                                                                  ),
-                                                                  Align(
-                                                                    alignment:
-                                                                        Alignment
-                                                                            .center,
-                                                                    child: Text(
-                                                                      "Ir a código",
-                                                                      style: TextStyle(
-                                                                          color: Colors
-                                                                              .white,
-                                                                          fontSize:
-                                                                              12,
-                                                                          fontWeight:
-                                                                              FontWeight.w500),
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          const SizedBox(
-                                                              height: 5),
-                                                          Expanded(
-                                                            child: TextButton(
-                                                              onPressed:
-                                                                  () async {
-                                                                await launch(
-                                                                    proyect[
-                                                                        "link-demo"]);
-                                                              },
-                                                              child: Stack(
-                                                                alignment:
-                                                                    Alignment
-                                                                        .center,
-                                                                children: [
-                                                                  Align(
-                                                                    alignment:
-                                                                        Alignment
-                                                                            .centerLeft,
-                                                                    child: Icon(
-                                                                      Icons
-                                                                          .visibility_rounded,
-                                                                      color: Colors
-                                                                          .black87,
-                                                                    ),
-                                                                  ),
-                                                                  Align(
-                                                                    alignment:
-                                                                        Alignment
-                                                                            .center,
-                                                                    child: Text(
-                                                                      "Ir a demo",
-                                                                      style: TextStyle(
-                                                                          color: Colors
-                                                                              .white,
-                                                                          fontSize:
-                                                                              12,
-                                                                          fontWeight:
-                                                                              FontWeight.w500),
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    const SizedBox(height: 15),
-                                                    Expanded(
-                                                      child: FittedBox(
-                                                        child: Wrap(
-                                                          children: [
-                                                            for (String tecnologyLogo
-                                                                in proyect[
-                                                                    "tecnologies-logo"])
-                                                              Padding(
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                            .all(
-                                                                        4.0),
-                                                                child:
-                                                                    CircleAvatar(
-                                                                        backgroundColor:
-                                                                            Colors
-                                                                                .white,
-                                                                        child:
-                                                                            Padding(
-                                                                          padding:
-                                                                              const EdgeInsets.all(4.0),
-                                                                          child:
-                                                                              Image.asset(tecnologyLogo + ".png"),
-                                                                        )),
-                                                              ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    );
-                                  }),
-                            ),
+                          CardProyectCarrousel(
+                            proyects: widget.proyects,
+                            size: widget.size,
+                            isMobileDesign: isMobileDesign,
                           ),
-                          const SizedBox(height: 15),
-                          SmoothPageIndicator(
-                              controller: proyectsController, // PageController
-                              count: proyects.length,
-                              effect: ScrollingDotsEffect(
-                                  activeDotColor: Colors.red,
-                                  dotColor: color2), // your preferred effect
-                              onDotClicked: (index) {})
                         ],
                       ),
                     ),
+                    /*
                     const SizedBox(height: 30),
                     Container(
-                      width: size.width,
-                      height: size.height * 0.7,
+                      height: widget.size.height * 0.15,
+                      width: widget.size.width,
+                      child: Row(
+                        //mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          for (String tecnology in widget.usedTecnologies)
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.primaries[widget
+                                        .usedTecnologies
+                                        .indexOf(tecnology)],
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10))),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: AutoSizeText(
+                                    tecnology,
+                                    minFontSize: 2,
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w800),
+                                  ),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
+                    */
+                    const SizedBox(height: 40),
+                    Container(
+                      width: widget.size.width,
+                      height: widget.size.height * 0.6,
                       child: Column(
                         children: [
                           SectionTitle(
-                            size: size,
+                            size: widget.size,
                             title: "Experiencia Laboral",
                           ),
                           const SizedBox(height: 40),
                           Expanded(
-                            child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 10),
-                                child: CustomStepper(
-                                  physics: NeverScrollableScrollPhysics(),
-                                  controlsBuilder: (BuildContext context,
-                                      {VoidCallback onStepContinue,
-                                      VoidCallback onStepCancel}) {
-                                    return const SizedBox.shrink();
-                                  },
-                                  customSteps: [
-                                    for (Map work in steps)
-                                      CustomStep(
-                                        stateIcon: work["logo"],
-                                        state: CustomStepState.disabled,
-                                        content: Container(
-                                          child: Row(children: [
-                                            Expanded(
-                                              child: Text(
-                                                work["tasks"],
-                                                style: TextStyle(
-                                                    color: Colors.white70,
-                                                    fontSize: 16,
-                                                    fontWeight:
-                                                        FontWeight.w800),
+                            child: Center(
+                              child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10),
+                                  child: CustomStepper(
+                                    physics: NeverScrollableScrollPhysics(),
+                                    controlsBuilder: (BuildContext context,
+                                        {VoidCallback onStepContinue,
+                                        VoidCallback onStepCancel}) {
+                                      return const SizedBox.shrink();
+                                    },
+                                    customSteps: [
+                                      for (Map work in widget.steps)
+                                        CustomStep(
+                                          stateIcon: work["logo"],
+                                          state: CustomStepState.disabled,
+                                          content: Container(
+                                            child: Row(children: [
+                                              Expanded(
+                                                child: AutoSizeText(
+                                                  work["tasks"],
+                                                  minFontSize: 8,
+                                                  style: TextStyle(
+                                                      color: Colors.white70,
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w800),
+                                                ),
                                               ),
-                                            ),
-                                          ]),
-                                        ),
-                                        title: Text(
-                                          work["title"],
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                        subtitle: Text(work["subtitle"],
+                                            ]),
+                                          ),
+                                          title: AutoSizeText(
+                                            work["title"],
+                                            minFontSize: 10,
                                             style: TextStyle(
-                                                color: Colors.white54,
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w200)),
-                                        isActive: true,
-                                      )
-                                  ],
-                                )),
+                                                color: Colors.white,
+                                                fontSize: 22,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                          subtitle: AutoSizeText(
+                                              work["subtitle"],
+                                              minFontSize: 6,
+                                              style: TextStyle(
+                                                  color: Colors.white54,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w200)),
+                                          isActive: true,
+                                        )
+                                    ],
+                                  )),
+                            ),
                           ),
                         ],
                       ),
                     ),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 40),
                     Container(
-                      width: size.width,
-                      height: size.height * 0.45,
+                      width: widget.size.width,
+                      height: widget.size.height * 0.35,
                       child: Column(
                         children: [
                           SectionTitle(
-                            size: size,
+                            size: widget.size,
                             title: "Sobre mí",
                           ),
                           const SizedBox(height: 40),
@@ -782,14 +730,14 @@ class MobileDesign extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 40),
                     Container(
-                      width: size.width,
-                      height: size.height * 0.28,
+                      width: widget.size.width,
+                      height: widget.size.height * 0.3,
                       child: Column(
                         children: [
                           SectionTitle(
-                            size: size,
+                            size: widget.size,
                             title: "Certificaciones",
                           ),
                           const SizedBox(height: 40),
@@ -797,60 +745,70 @@ class MobileDesign extends StatelessWidget {
                             child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Expanded(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            color: Colors.red,
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(10),
-                                            )),
-                                        child: Image.asset(
-                                          "buenos-aires-logo.png",
-                                          fit: BoxFit.cover,
+                                        child: Container(
+                                      height: widget.size.height * 0.25,
+                                      width: widget.size.width * 0.25,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: ExactAssetImage(
+                                            "ba-logo.jpeg",
+                                          ),
                                         ),
+                                        shape: BoxShape.circle,
                                       ),
-                                    ),
+                                    )),
+                                    const SizedBox(height: 20),
                                     Expanded(
-                                      flex: 2,
                                       child: Column(
                                         children: [
-                                          Text(
-                                            "CODO a CODO 2019",
-                                            style: TextStyle(
-                                                color: Colors.white70,
+                                          FittedBox(
+                                            child: AutoSizeText(
+                                              "CODO a CODO 2019",
+                                              minFontSize: 2,
+                                              style: TextStyle(
+                                                color: Colors.white,
                                                 fontSize: 16,
-                                                fontWeight: FontWeight.w600),
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
                                           ),
                                           const SizedBox(height: 10),
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 30),
-                                            child: Divider(
-                                                height: 1, color: Colors.grey),
-                                          ),
-                                          const SizedBox(height: 10),
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 20),
-                                            child: MaterialButton(
-                                              height: 50,
-                                              minWidth: size.width,
-                                              onPressed: () {
-                                                final String url =
-                                                    "codo-a-codo.pdf";
-                                                downloadFile(url);
-                                              },
-                                              color: Colors.blueAccent,
-                                              child: Text(
-                                                "DESCARGAR",
-                                                style: TextStyle(
-                                                    color: Colors.white60,
-                                                    fontSize: 16,
-                                                    fontWeight:
-                                                        FontWeight.w400),
+                                          Expanded(
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 20),
+                                              child: MaterialButton(
+                                                padding:
+                                                    const EdgeInsets.all(10),
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            25)),
+                                                minWidth:
+                                                    widget.size.width / 2.5,
+                                                onPressed: () {
+                                                  final String url =
+                                                      "codo-a-codo.pdf";
+                                                  downloadFile(url);
+                                                },
+                                                color: Colors.blueAccent,
+                                                child: FittedBox(
+                                                  child: AutoSizeText(
+                                                    "DESCARGAR",
+                                                    minFontSize: 2,
+                                                    style: TextStyle(
+                                                      color: Colors.white70,
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                    ),
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -863,6 +821,221 @@ class MobileDesign extends StatelessWidget {
                         ],
                       ),
                     ),
+                    const SizedBox(height: 40),
+                    Container(
+                      width: widget.size.width,
+                      height: widget.size.height * 0.5,
+                      child: Column(
+                        children: [
+                          SectionTitle(
+                            size: widget.size,
+                            title: "Contáctame",
+                          ),
+                          const SizedBox(height: 40),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: widget.size.width * 0.15),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Column(
+                                      children: [
+                                        Form(
+                                          key: _formNameKey,
+                                          child: TextFormField(
+                                            onChanged: (value) {
+                                              username = value;
+                                            },
+                                            validator: (value) {
+                                              if (value == null ||
+                                                  value.isEmpty) {
+                                                return 'Por favor ingrese un nombre';
+                                              }
+                                              return null;
+                                            },
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 18),
+                                            decoration: InputDecoration(
+                                              focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: Colors.white,
+                                                  width: 1,
+                                                  style: BorderStyle.solid,
+                                                ),
+                                              ),
+                                              enabledBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: Colors.white,
+                                                  width: 2,
+                                                  style: BorderStyle.solid,
+                                                ),
+                                              ),
+                                              disabledBorder:
+                                                  OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: Colors.white,
+                                                  width: 1,
+                                                  style: BorderStyle.solid,
+                                                ),
+                                              ),
+                                              labelText: "Nombre",
+                                              suffixIcon: Icon(
+                                                Icons.person,
+                                                color: Colors.white,
+                                              ),
+                                              hintStyle: TextStyle(
+                                                  color: Colors.grey,
+                                                  fontSize: 17),
+                                              labelStyle: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 15),
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(height: 15),
+                                        Expanded(
+                                          child: Form(
+                                            key: _formSuggestionKey,
+                                            child: TextFormField(
+                                              expands: true,
+                                              maxLines: null,
+                                              onChanged: (value) {
+                                                suggestion = value;
+                                              },
+                                              validator: (value) {
+                                                if (value == null ||
+                                                    value.isEmpty) {
+                                                  return 'Por favor ingrese texto';
+                                                }
+                                                return null;
+                                              },
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 18),
+                                              decoration: InputDecoration(
+                                                focusedBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Colors.white,
+                                                    width: 1,
+                                                    style: BorderStyle.solid,
+                                                  ),
+                                                ),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Colors.white,
+                                                    width: 1,
+                                                    style: BorderStyle.solid,
+                                                  ),
+                                                ),
+                                                disabledBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Colors.white,
+                                                    width: 1,
+                                                    style: BorderStyle.solid,
+                                                  ),
+                                                ),
+                                                labelText: "Contacto",
+                                                suffixIcon: Icon(
+                                                  Icons.comment,
+                                                  color: Colors.white,
+                                                ),
+                                                hintStyle: TextStyle(
+                                                    color: Colors.grey,
+                                                    fontSize: 17),
+                                                labelStyle: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 15),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(height: 15),
+                                  MaterialButton(
+                                    onPressed: () async {
+                                      if (_isLoading) return;
+                                      if (_formNameKey.currentState
+                                              .validate() &&
+                                          _formSuggestionKey.currentState
+                                              .validate()) {
+                                        setState(() {
+                                          _isLoading = true;
+                                        });
+
+                                        await sendEmail();
+
+                                        setState(() {
+                                          _isLoading = false;
+                                        });
+                                      } else {
+                                        print("Datos no validados");
+                                        return;
+                                      }
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Spacer(),
+                                        FittedBox(
+                                          child: AutoSizeText(
+                                            "Enviar",
+                                            minFontSize: 2,
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                          ),
+                                        ),
+                                        Spacer(),
+                                        _isLoading
+                                            ? Padding(
+                                                padding: const EdgeInsets.only(
+                                                    right: 15.0),
+                                                child: SizedBox(
+                                                  height: 25,
+                                                  width: 25,
+                                                  child:
+                                                      CircularProgressIndicator(
+                                                          valueColor:
+                                                              AlwaysStoppedAnimation<
+                                                                  Color>(
+                                                    Colors.white,
+                                                  )),
+                                                ),
+                                              )
+                                            : Padding(
+                                                padding: const EdgeInsets.only(
+                                                    right: 15.0),
+                                                child: Icon(
+                                                  Icons.near_me,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                      ],
+                                    ),
+                                    color: Colors.red,
+                                    height: widget.size.height * 0.07,
+                                    minWidth: widget.size.width,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10))),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 40),
                   ],
                 ),
               ),
@@ -871,6 +1044,653 @@ class MobileDesign extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class CardProyectCarrousel extends StatefulWidget {
+  CardProyectCarrousel({
+    Key key,
+    @required this.proyects,
+    @required this.size,
+    @required this.isMobileDesign,
+  }) : super(key: key);
+
+  final bool isMobileDesign;
+  final Size size;
+  final List proyects;
+
+  @override
+  _CardProyectCarrouselState createState() => _CardProyectCarrouselState();
+}
+
+class _CardProyectCarrouselState extends State<CardProyectCarrousel> {
+  int _currentIndex = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    PageController proyectsController = PageController(
+        viewportFraction: widget.isMobileDesign ? 0.7 : 0.4, initialPage: 1);
+    print(proyectsController.viewportFraction);
+    return Expanded(
+      child: Column(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: PageView.builder(
+                  physics: const BouncingScrollPhysics(
+                      parent: AlwaysScrollableScrollPhysics()),
+                  onPageChanged: (index) {
+                    setState(() {
+                      _currentIndex = index;
+                    });
+                  },
+                  controller: proyectsController,
+                  reverse: false,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: widget.proyects.length,
+                  itemBuilder: (context, index) {
+                    Map proyect = widget.proyects[index];
+                    var _scale = _currentIndex == index ? 1.0 : 0.8;
+
+                    return TweenAnimationBuilder(
+                      tween: Tween(begin: _scale, end: _scale),
+                      duration: const Duration(milliseconds: 350),
+                      builder: (context, value, child) {
+                        return Transform.scale(
+                          scale: value,
+                          child: child,
+                        );
+                      },
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: color2,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(10),
+                                      bottomLeft: Radius.circular(10)),
+                                  child: Image.asset(
+                                    proyect["image"],
+                                    fit: BoxFit.cover,
+                                    height: widget.size.height,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      FittedBox(
+                                        child: AutoSizeText(
+                                          proyect["title"],
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 27,
+                                            color: Colors.red,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(height: 10),
+                                      Expanded(
+                                        flex: 2,
+                                        child: AutoSizeText(
+                                          proyect["description"],
+                                          minFontSize: 2,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 22,
+                                            color: Colors.white60,
+                                            letterSpacing: 1.1,
+                                            fontWeight: FontWeight.w300,
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(height: 10),
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            Expanded(
+                                              child: MaterialButton(
+                                                color: color3,
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            15)),
+                                                onPressed: () async {
+                                                  await launch(proyect[
+                                                      "link-repository"]);
+                                                },
+                                                child: Row(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Icon(
+                                                      Icons.code_outlined,
+                                                      color: Colors
+                                                          .lightBlueAccent,
+                                                    ),
+                                                    Expanded(
+                                                      child: Center(
+                                                        child: AutoSizeText(
+                                                          "Ir a código",
+                                                          minFontSize: 2,
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .lightBlueAccent,
+                                                              fontSize: 22,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                            const SizedBox(height: 5),
+                                            Expanded(
+                                              child: MaterialButton(
+                                                color: color3,
+                                                onPressed: () async {
+                                                  await launch(
+                                                      proyect["link-demo"]);
+                                                },
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            15)),
+                                                child: Row(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Icon(
+                                                      Icons.visibility_rounded,
+                                                      color: Colors
+                                                          .lightBlueAccent,
+                                                    ),
+                                                    Expanded(
+                                                      child: Center(
+                                                        child: AutoSizeText(
+                                                          "Ir a demo",
+                                                          minFontSize: 2,
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .lightBlueAccent,
+                                                              fontSize: 22,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      const SizedBox(height: 15),
+                                      Expanded(
+                                        child: FittedBox(
+                                          child: Wrap(
+                                            children: [
+                                              for (Map tecnology
+                                                  in proyect["tecnologies"])
+                                                Padding(
+                                                  padding: const EdgeInsets
+                                                      .symmetric(horizontal: 4),
+                                                  child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceAround,
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(4.0),
+                                                        child: CircleAvatar(
+                                                            backgroundColor:
+                                                                Colors.white,
+                                                            child: Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .all(6.0),
+                                                              child: Image.asset(
+                                                                  tecnology[
+                                                                          "logo"] +
+                                                                      ".png"),
+                                                            )),
+                                                      ),
+                                                      const SizedBox(height: 5),
+                                                      AutoSizeText(
+                                                        tecnology["tecnology"],
+                                                        minFontSize: 2,
+                                                        style: TextStyle(
+                                                            color: Colors.white,
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w800),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
+            ),
+          ),
+          const SizedBox(height: 15),
+          SmoothPageIndicator(
+              controller: proyectsController, // PageController
+              count: widget.proyects.length,
+              effect: ScrollingDotsEffect(
+                  activeDotColor: Colors.red,
+                  dotColor: color2), // your preferred effect
+              onDotClicked: (index) {}),
+        ],
+      ),
+    );
+  }
+}
+
+class Presentation extends StatelessWidget {
+  const Presentation({
+    Key key,
+    @required this.size,
+    @required this.isMobileDesign,
+  }) : super(key: key);
+
+  final Size size;
+  final bool isMobileDesign;
+
+  @override
+  Widget build(BuildContext context) {
+    return isMobileDesign
+        ? Wrap(
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            runSpacing: 45,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    FittedBox(
+                      child: Text(
+                        "Kevin Figueroa",
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 55,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    FittedBox(
+                      child: Container(
+                        height: 65,
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_forward_ios_outlined,
+                              color: Colors.red,
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            DefaultTextStyle(
+                              style: TextStyle(
+                                  color: Colors.white.withOpacity(0.7),
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w400),
+                              child: AnimatedTextKit(
+                                repeatForever: true,
+                                animatedTexts: [
+                                  RotateAnimatedText('Desarrollador Flutter',
+                                      duration: const Duration(seconds: 4)),
+                                  RotateAnimatedText('Desarrollador FullStack',
+                                      duration: const Duration(seconds: 4)),
+                                ],
+                                onTap: () {
+                                  print("Tap Event");
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 40),
+              Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 40),
+                  child: Container(
+                    width: size.width / 2.2,
+                    child: Image.asset(
+                      "imagen_fondo_portfolio.png",
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                height: size.height * 0.1,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: size.height * 0.05),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Expanded(
+                        child: MaterialButton(
+                            color: Color.fromRGBO(14, 118, 168, 1),
+                            shape: RoundedRectangleBorder(
+                                side: BorderSide(color: Colors.white, width: 1),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: FittedBox(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    AutoSizeText("Linkedin",
+                                        minFontSize: 2,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w800)),
+                                    const SizedBox(width: 10),
+                                    CircleAvatar(
+                                        backgroundColor: Colors.white,
+                                        radius: 20,
+                                        child: CircleAvatar(
+                                          backgroundColor: Colors.transparent,
+                                          radius: 15,
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(50)),
+                                            child: Image.asset(
+                                              "logo-linkedin.png",
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        )),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            onPressed: () {
+                              launch(
+                                  "https://www.linkedin.com/in/kevin-david-figueroa-784113183/");
+                            }),
+                      ),
+                      const SizedBox(height: 10),
+                      Expanded(
+                        child: MaterialButton(
+                            color: Color.fromRGBO(23, 21, 21, 1),
+                            shape: RoundedRectangleBorder(
+                                side: BorderSide(color: Colors.white, width: 1),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: FittedBox(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    AutoSizeText("Github",
+                                        minFontSize: 2,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w800)),
+                                    const SizedBox(width: 10),
+                                    CircleAvatar(
+                                        backgroundColor: Colors.white,
+                                        radius: 20,
+                                        child: CircleAvatar(
+                                          backgroundColor: Colors.transparent,
+                                          radius: 15,
+                                          child: Image.asset(
+                                            "logo-github.png",
+                                            fit: BoxFit.cover,
+                                          ),
+                                        )),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            onPressed: () {
+                              launch("https://github.com/KevinnFigueroa");
+                            }),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          )
+        : Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Spacer(),
+                      FittedBox(
+                        child: Text(
+                          "Kevin Figueroa",
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 70,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      FittedBox(
+                          child: Container(
+                        height: 65,
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_forward_ios_outlined,
+                              color: Colors.red,
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            DefaultTextStyle(
+                              style: TextStyle(
+                                  color: Colors.white.withOpacity(0.7),
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w400),
+                              child: AnimatedTextKit(
+                                repeatForever: true,
+                                animatedTexts: [
+                                  RotateAnimatedText(
+                                    'Desarrollador Flutter',
+                                    duration: const Duration(seconds: 4),
+                                  ),
+                                  RotateAnimatedText(
+                                    'Desarrollador FullStack',
+                                    duration: const Duration(seconds: 4),
+                                  ),
+                                ],
+                                onTap: () {
+                                  print("Tap Event");
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      )),
+                      const Spacer(),
+                      Container(
+                        width: size.width / 3.5,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: MaterialButton(
+                                  color: Color.fromRGBO(14, 118, 168, 1),
+                                  shape: RoundedRectangleBorder(
+                                      side: BorderSide(
+                                          color: Colors.white, width: 1),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  child: FittedBox(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          AutoSizeText("Linkedin",
+                                              minFontSize: 2,
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w800)),
+                                          const SizedBox(width: 10),
+                                          CircleAvatar(
+                                              backgroundColor: Colors.white,
+                                              radius: 20,
+                                              child: CircleAvatar(
+                                                backgroundColor:
+                                                    Colors.transparent,
+                                                radius: 15,
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(50)),
+                                                  child: Image.asset(
+                                                    "logo-linkedin.png",
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                              )),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    launch(
+                                        "https://www.linkedin.com/in/kevin-david-figueroa-784113183/");
+                                  }),
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: MaterialButton(
+                                  color: Color.fromRGBO(23, 21, 21, 1),
+                                  shape: RoundedRectangleBorder(
+                                      side: BorderSide(
+                                          color: Colors.white, width: 1),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  child: FittedBox(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          AutoSizeText("Github",
+                                              minFontSize: 2,
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w800)),
+                                          const SizedBox(width: 10),
+                                          CircleAvatar(
+                                              backgroundColor: Colors.white,
+                                              radius: 20,
+                                              child: CircleAvatar(
+                                                backgroundColor:
+                                                    Colors.transparent,
+                                                radius: 15,
+                                                child: Image.asset(
+                                                  "logo-github.png",
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              )),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    launch("https://github.com/KevinnFigueroa");
+                                  }),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 0),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 40),
+                    child: Container(
+                      width: size.width / 2.2,
+                      child: Image.asset(
+                        "imagen_fondo_portfolio.png",
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          );
   }
 }
 
@@ -892,7 +1712,7 @@ class SectionTitle extends StatelessWidget {
               child: Text(
                 title,
                 style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white.withOpacity(0.8)),
               ),
@@ -907,337 +1727,6 @@ class SectionTitle extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class WebDesign extends StatelessWidget {
-  const WebDesign({
-    Key key,
-    @required this.appBarHeight,
-    @required this.separatorAppBar,
-    @required this.size,
-    @required this.proyectsController,
-    @required this.proyects,
-  }) : super(key: key);
-
-  final double appBarHeight;
-  final Widget separatorAppBar;
-  final Size size;
-  final PageController proyectsController;
-  final List<Map<String, dynamic>> proyects;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: color1,
-      appBar: AppBar(
-        backgroundColor: color1,
-        toolbarHeight: appBarHeight,
-        actions: [
-          TextButton(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Sobre mi",
-                style: TextStyle(color: Colors.red.withOpacity(0.6)),
-              ),
-            ),
-            onPressed: () {},
-          ),
-          separatorAppBar,
-          TextButton(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Proyectos",
-                style: TextStyle(color: Colors.red.withOpacity(0.6)),
-              ),
-            ),
-            onPressed: () {},
-          ),
-          separatorAppBar,
-          TextButton(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Experiencia",
-                style: TextStyle(color: Colors.red.withOpacity(0.6)),
-              ),
-            ),
-            onPressed: () {},
-          ),
-          separatorAppBar,
-          TextButton(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Contacto",
-                style: TextStyle(color: Colors.red.withOpacity(0.6)),
-              ),
-            ),
-            onPressed: () {},
-          ),
-          const SizedBox(width: 10),
-        ],
-      ),
-      body: Column(children: [
-        Expanded(
-          child: ListView(
-            children: [
-              Container(
-                height: size.height - appBarHeight,
-                width: size.width,
-                child: Stack(fit: StackFit.expand, children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        /*
-                        Text(
-                          "Bienvenidos a mi portfolio",
-                          style: TextStyle(
-                              color: Colors.white.withOpacity(0.7),
-                              fontSize: 32,
-                              fontWeight: FontWeight.w300),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        */
-                        FittedBox(
-                          child: Text(
-                            "Kevin Figueroa",
-                            style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 55,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        FittedBox(
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.arrow_forward_ios_outlined,
-                                color: Colors.red,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                "Desarrollador FullStack",
-                                style: TextStyle(
-                                    color: Colors.white.withOpacity(0.7),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w400),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 40),
-                      child: Container(
-                        width: size.width / 2.2,
-                        child: Image.asset(
-                          "imagen_fondo_portfolio.png",
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                ]),
-              ),
-              Container(
-                width: size.width,
-                height: size.height * 0.5,
-                child: Column(
-                  children: [
-                    SectionTitle(
-                      size: size,
-                      title: "Proyectos",
-                    ),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    /*Align(
-                          alignment: Alignment.centerLeft,
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 20.0),
-                            child: Text(
-                                "Estos son algunos de mis proyectos en los que trabajé...",
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    color: Colors.white.withOpacity(0.8))),
-                          ),
-                        ),*/
-
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: ListView.builder(
-                            controller: proyectsController,
-                            scrollDirection: Axis.horizontal,
-                            itemCount: proyects.length,
-                            itemBuilder: (context, index) {
-                              Map proyect = proyects[index];
-                              return Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 15, vertical: 15),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: color2,
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(10))),
-                                  width: size.width * 0.2,
-                                  child: Row(
-                                    children: [
-                                      Expanded(
-                                        child: Container(
-                                          child: Image.asset(
-                                            proyect["image"],
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 1,
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(10.0),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              Text(
-                                                proyect["title"],
-                                                style: TextStyle(
-                                                  color: Colors.red,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                              Text(
-                                                proyect["description"],
-                                                style: TextStyle(
-                                                  color: Colors.white60,
-                                                  fontWeight: FontWeight.w300,
-                                                ),
-                                              ),
-                                              Wrap(
-                                                children: [
-                                                  TextButton(
-                                                    onPressed: () async {
-                                                      await launch(proyect[
-                                                          "link-repository"]);
-                                                    },
-                                                    child: Row(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
-                                                      children: [
-                                                        Icon(
-                                                          Icons.code_outlined,
-                                                          color: Colors.black87,
-                                                        ),
-                                                        Text(
-                                                          "Ir a código",
-                                                          style: TextStyle(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 12,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  const SizedBox(width: 5),
-                                                  TextButton(
-                                                    onPressed: () async {
-                                                      await launch(
-                                                          proyect["link-demo"]);
-                                                    },
-                                                    child: Row(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
-                                                      children: [
-                                                        Icon(
-                                                          Icons
-                                                              .visibility_rounded,
-                                                          color: Colors.black87,
-                                                        ),
-                                                        Text(
-                                                          "Ir a demo",
-                                                          style: TextStyle(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 12,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Wrap(
-                                                children: [
-                                                  for (String tecnologyLogo
-                                                      in proyect[
-                                                          "tecnologies-logo"])
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                              4.0),
-                                                      child: CircleAvatar(
-                                                          backgroundColor:
-                                                              Colors.white,
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(4.0),
-                                                            child: Image.asset(
-                                                                tecnologyLogo +
-                                                                    ".png"),
-                                                          )),
-                                                    ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            }),
-                      ),
-                    ),
-                    const SizedBox(height: 15),
-                    SmoothPageIndicator(
-                        controller: proyectsController, // PageController
-                        count: proyects.length,
-                        effect: ScrollingDotsEffect(
-                            activeDotColor: Colors.red,
-                            dotColor: color2), // your preferred effect
-                        onDotClicked: (index) {})
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ]),
     );
   }
 }
