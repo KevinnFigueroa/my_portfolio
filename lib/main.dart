@@ -453,12 +453,52 @@ class _MobileDesignState extends State<MobileDesign> {
         body: jsonBody,
         encoding: encoding,
       );
+
+      showMessage("Tu mensaje ha sido enviado con éxito!");
     } catch (error) {
       print("Hubo un error $error");
       setState(() {
         _isLoading = false;
       });
     }
+  }
+
+  void showMessage(String message) {
+    print(widget.size.width);
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.symmetric(
+            horizontal: widget.size.width * 0.1, vertical: 30),
+        padding: EdgeInsets.all(6.0),
+        backgroundColor: Colors.lightBlueAccent,
+        content: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const SizedBox(width: 25),
+            FittedBox(
+              child: CircleAvatar(
+                backgroundColor: Colors.transparent,
+                child: Icon(
+                  Icons.info_outline_rounded,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            const SizedBox(width: 25),
+            Expanded(
+              child: AutoSizeText(
+                message,
+                maxLines: 1,
+                minFontSize: 6,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.w500),
+              ),
+            ),
+            const SizedBox(width: 25),
+          ],
+        )));
   }
 
   @override
