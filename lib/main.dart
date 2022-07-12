@@ -112,8 +112,6 @@ class HomePage extends StatelessWidget {
         "title": "Binit",
         "position": "Desarrollador web",
         "tasks": "Desarrollo web en .NET",
-        //"achievements":
-        //    "Logré ayudar en el proceso de refactorización de la app SV",
         "logo": "binit-logo.jpeg",
         "subtitle": "5/4/21 - 23/4/21"
       },
@@ -122,8 +120,6 @@ class HomePage extends StatelessWidget {
         "position": "Desarrollador FullStack / Mobile",
         "tasks":
             "Desarrollo de dos aplicaciones móviles hechas en Flutter y un panel administrativo hecho en vueJs. además contribuí en el desarrollo del backend utilizando Django y postgreSQL",
-        //"achievements":
-        //    "Logré ayudar en el proceso de refactorización de la app SV",
         "logo": "colombia-logo.jpeg",
         "subtitle": "8/20 - 2/21"
       }
@@ -136,9 +132,29 @@ class HomePage extends StatelessWidget {
             "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
         "image": "proyecto_1.png",
         "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
+            "https://play.google.com/store/apps/details?id=app.movies.finder",
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
+      },
+      {
+        "title": "Telecentro Sucursal Virtual",
+        "description":
+            "Aplicación para gestionar y consultar por el servicio ofrecido.",
+        "image": "proyecto_2.png",
+        "link-demo":
+            "https://play.google.com/store/apps/details?id=ar.com.telecentro.sv",
         "tecnologies": [
           {
             "logo": "logo-flutter",
@@ -159,14 +175,12 @@ class HomePage extends StatelessWidget {
         ]
       },
       {
-        "title": "Movies App",
+        "title": "Task App",
         "description":
-            "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
-        "image": "proyecto_1.png",
+            "Aplicación para poder crear/organizar tareas, configurar alarmas programadas.",
+        "image": "proyecto_3.png",
         "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
+            "https://play.google.com/store/apps/details?id=app.todo.clone",
         "tecnologies": [
           {
             "logo": "logo-flutter",
@@ -187,14 +201,37 @@ class HomePage extends StatelessWidget {
         ]
       },
       {
-        "title": "Movies App",
+        "title": "Buscador de países",
+        "description": "Aplicación para obtener información sobre países.",
+        "image": "proyecto_4.png",
+        "link-demo": "https://kevinnfigueroa.github.io/rest_countrys/",
+        "link-repository": "https://github.com/KevinnFigueroa/rest_countrys",
+        "tecnologies": [
+          {
+            "logo": "logo-html",
+            "tecnology": "Html",
+          },
+          {
+            "logo": "logo-css",
+            "tecnology": "Css",
+          },
+          {
+            "logo": "logo-js",
+            "tecnology": "JavaScript",
+          },
+          {
+            "logo": "logo-vue",
+            "tecnology": "VueJs",
+          },
+        ]
+      },
+      {
+        "title": "Ultraman App",
         "description":
-            "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
-        "image": "proyecto_1.png",
+            "Aplicación para realizar trabajos de lavado/limpieza a domicilios.",
+        "image": "proyecto_5.png",
         "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
+            "https://play.google.com/store/apps/details?id=co.ultraapp.ultraman.android",
         "tecnologies": [
           {
             "logo": "logo-flutter",
@@ -215,14 +252,34 @@ class HomePage extends StatelessWidget {
         ]
       },
       {
-        "title": "Movies App",
+        "title": "Maternar.co",
         "description":
-            "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
-        "image": "proyecto_1.png",
+            "Aplicación para tener control sobre embarazo, temporizador de contracciones, información y videos.",
+        "image": "proyecto_6.png",
         "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
+            "https://play.google.com/store/apps/details?id=co.maternar.app_maternar&hl=es_AR&gl=US",
+        "tecnologies": [
+          {
+            "logo": "logo-flutter",
+            "tecnology": "Flutter",
+          },
+          {
+            "logo": "logo-dart",
+            "tecnology": "Dart",
+          },
+          {
+            "logo": "logo-playstore",
+            "tecnology": "Playstore",
+          },
+        ]
+      },
+      {
+        "title": "UltraApp",
+        "description":
+            "Aplicación para requerir servicios de lavado a domicilio.",
+        "image": "proyecto_7.png",
+        "link-demo":
+            "https://play.google.com/store/apps/details?id=co.ultraapp.android",
         "tecnologies": [
           {
             "logo": "logo-flutter",
@@ -243,142 +300,46 @@ class HomePage extends StatelessWidget {
         ]
       },
       {
-        "title": "Movies App",
+        "title": "Buscador de IP's",
         "description":
-            "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
-        "image": "proyecto_1.png",
-        "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
+            "Aplicación para obtener ubicación en base a IP pública.",
+        "image": "proyecto_8.png",
+        "link-demo": "https://kevinnfigueroa.github.io/ip_address/",
+        "link-repository": "https://github.com/KevinnFigueroa/ip_address",
         "tecnologies": [
           {
-            "logo": "logo-flutter",
-            "tecnology": "Flutter",
+            "logo": "logo-html",
+            "tecnology": "Html",
           },
           {
-            "logo": "logo-dart",
-            "tecnology": "Dart",
+            "logo": "logo-css",
+            "tecnology": "Css",
           },
           {
-            "logo": "logo-firebase",
-            "tecnology": "Firebase",
-          },
-          {
-            "logo": "logo-playstore",
-            "tecnology": "Playstore",
+            "logo": "logo-js",
+            "tecnology": "JavaScript",
           },
         ]
       },
       {
-        "title": "Movies App",
-        "description":
-            "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
-        "image": "proyecto_1.png",
-        "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
+        "title": "Mi precio",
+        "description": "Mockup de precios.",
+        "image": "proyecto_9.png",
+        "link-demo": "https://kevinnfigueroa.github.io/pricing_component/",
         "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
+            "https://github.com/KevinnFigueroa/pricing_component",
         "tecnologies": [
           {
-            "logo": "logo-flutter",
-            "tecnology": "Flutter",
+            "logo": "logo-html",
+            "tecnology": "Html",
           },
           {
-            "logo": "logo-dart",
-            "tecnology": "Dart",
+            "logo": "logo-css",
+            "tecnology": "Css",
           },
           {
-            "logo": "logo-firebase",
-            "tecnology": "Firebase",
-          },
-          {
-            "logo": "logo-playstore",
-            "tecnology": "Playstore",
-          },
-        ]
-      },
-      {
-        "title": "Movies App",
-        "description":
-            "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
-        "image": "proyecto_1.png",
-        "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies": [
-          {
-            "logo": "logo-flutter",
-            "tecnology": "Flutter",
-          },
-          {
-            "logo": "logo-dart",
-            "tecnology": "Dart",
-          },
-          {
-            "logo": "logo-firebase",
-            "tecnology": "Firebase",
-          },
-          {
-            "logo": "logo-playstore",
-            "tecnology": "Playstore",
-          },
-        ]
-      },
-      {
-        "title": "Movies App",
-        "description":
-            "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
-        "image": "proyecto_1.png",
-        "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies": [
-          {
-            "logo": "logo-flutter",
-            "tecnology": "Flutter",
-          },
-          {
-            "logo": "logo-dart",
-            "tecnology": "Dart",
-          },
-          {
-            "logo": "logo-firebase",
-            "tecnology": "Firebase",
-          },
-          {
-            "logo": "logo-playstore",
-            "tecnology": "Playstore",
-          },
-        ]
-      },
-      {
-        "title": "Movies App",
-        "description":
-            "Aplicación para obtener información de películas, estrenos, trailers, reseñas, buscador y repartos de cada película.",
-        "image": "proyecto_1.png",
-        "link-demo":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "link-repository":
-            "https://play.google.com/store/apps/details?id=app.movie.finder",
-        "tecnologies": [
-          {
-            "logo": "logo-flutter",
-            "tecnology": "Flutter",
-          },
-          {
-            "logo": "logo-dart",
-            "tecnology": "Dart",
-          },
-          {
-            "logo": "logo-firebase",
-            "tecnology": "Firebase",
-          },
-          {
-            "logo": "logo-playstore",
-            "tecnology": "Playstore",
+            "logo": "logo-js",
+            "tecnology": "JavaScript",
           },
         ]
       }
@@ -509,57 +470,6 @@ class _MobileDesignState extends State<MobileDesign> {
         elevation: 0,
         backgroundColor: color1,
       ),
-      /*
-      drawer: Drawer(
-        child: Column(
-          children: [
-            TextButton(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Sobre mi",
-                  style: TextStyle(color: Colors.red.withOpacity(0.6)),
-                ),
-              ),
-              onPressed: () {},
-            ),
-            widget.separatorDrawerMobile,
-            TextButton(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Proyectos",
-                  style: TextStyle(color: Colors.red.withOpacity(0.6)),
-                ),
-              ),
-              onPressed: () {},
-            ),
-            widget.separatorDrawerMobile,
-            TextButton(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Experiencia",
-                  style: TextStyle(color: Colors.red.withOpacity(0.6)),
-                ),
-              ),
-              onPressed: () {},
-            ),
-            widget.separatorDrawerMobile,
-            TextButton(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Contacto",
-                  style: TextStyle(color: Colors.red.withOpacity(0.6)),
-                ),
-              ),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
-      */
       body: Stack(
         children: [
           Container(
@@ -1159,7 +1069,7 @@ class _CardProyectCarrouselState extends State<CardProyectCarrousel> {
                                       bottomLeft: Radius.circular(10)),
                                   child: Image.asset(
                                     proyect["image"],
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.fill,
                                     height: widget.size.height,
                                   ),
                                 ),
@@ -1201,45 +1111,56 @@ class _CardProyectCarrouselState extends State<CardProyectCarrousel> {
                                       Expanded(
                                         child: Column(
                                           children: [
-                                            Expanded(
-                                              child: MaterialButton(
-                                                color: color3,
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            15)),
-                                                onPressed: () async {
-                                                  await launch(proyect[
-                                                      "link-repository"]);
-                                                },
-                                                child: Row(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
-                                                  children: [
-                                                    Icon(
-                                                      Icons.code_outlined,
-                                                      color: Colors
-                                                          .lightBlueAccent,
-                                                    ),
-                                                    Expanded(
-                                                      child: Center(
-                                                        child: AutoSizeText(
-                                                          "Ir a código",
-                                                          minFontSize: 2,
-                                                          style: TextStyle(
+                                            proyect["link-repository"] != null
+                                                ? Expanded(
+                                                    child: MaterialButton(
+                                                      color: color3,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          15)),
+                                                      onPressed: () async {
+                                                        await launch(proyect[
+                                                            "link-repository"]);
+                                                      },
+                                                      child: Row(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Expanded(
+                                                            child: Icon(
+                                                              Icons
+                                                                  .code_outlined,
                                                               color: Colors
                                                                   .lightBlueAccent,
-                                                              fontSize: 22,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                        ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            flex: 2,
+                                                            child: Center(
+                                                              child:
+                                                                  AutoSizeText(
+                                                                "Ir a código",
+                                                                minFontSize: 2,
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .lightBlueAccent,
+                                                                    fontSize:
+                                                                        22,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
                                                       ),
                                                     ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
+                                                  )
+                                                : const SizedBox.shrink(),
                                             const SizedBox(height: 5),
                                             Expanded(
                                               child: MaterialButton(
@@ -1256,16 +1177,22 @@ class _CardProyectCarrouselState extends State<CardProyectCarrousel> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.center,
                                                   children: [
-                                                    Icon(
-                                                      Icons.visibility_rounded,
-                                                      color: Colors
-                                                          .lightBlueAccent,
+                                                    Expanded(
+                                                      child: Icon(
+                                                        Icons
+                                                            .visibility_rounded,
+                                                        color: Colors
+                                                            .lightBlueAccent,
+                                                      ),
                                                     ),
                                                     Expanded(
+                                                      flex: 2,
                                                       child: Center(
                                                         child: AutoSizeText(
                                                           "Ir a demo",
                                                           minFontSize: 2,
+                                                          textAlign:
+                                                              TextAlign.center,
                                                           style: TextStyle(
                                                               color: Colors
                                                                   .lightBlueAccent,
@@ -1420,9 +1347,7 @@ class Presentation extends StatelessWidget {
                                   RotateAnimatedText('Desarrollador FullStack',
                                       duration: const Duration(seconds: 4)),
                                 ],
-                                onTap: () {
-                                  print("Tap Event");
-                                },
+                                onTap: () {},
                               ),
                             ),
                           ],
@@ -1435,13 +1360,24 @@ class Presentation extends StatelessWidget {
               const SizedBox(height: 40),
               Align(
                 alignment: Alignment.center,
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 40),
-                  child: Container(
-                    width: size.width / 2.2,
-                    child: Image.asset(
-                      "imagen_fondo_portfolio.png",
-                      fit: BoxFit.fill,
+                child: Container(
+                  width: size.width * 0.5,
+                  height: size.height * 0.15,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white.withOpacity(0.8),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Container(
+                        width: size.width * 0.4,
+                        height: size.height * 0.4,
+                        child: FittedBox(
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage(
+                              "foto_perfil.jpg",
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -1716,18 +1652,32 @@ class Presentation extends StatelessWidget {
               const SizedBox(height: 0),
               Expanded(
                 child: Align(
-                  alignment: Alignment.center,
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 40),
-                    child: Container(
-                      width: size.width / 2.2,
-                      child: Image.asset(
-                        "imagen_fondo_portfolio.png",
-                        fit: BoxFit.fill,
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 40),
+                      child: Container(
+                        width: size.width * 0.41,
+                        height: size.height * 0.41,
+                        child: CircleAvatar(
+                          backgroundColor: Colors.white.withOpacity(0.8),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Container(
+                              width: size.width * 0.4,
+                              height: size.height * 0.4,
+                              child: FittedBox(
+                                child: CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                    "foto_perfil.jpg",
+                                    //fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                ),
+                    )),
               ),
             ],
           );
